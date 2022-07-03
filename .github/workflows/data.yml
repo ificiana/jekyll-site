@@ -16,6 +16,7 @@ jobs:
       
       - name: Create file pass
         run: |
+          ls -a
           touch pass.yml
           FILE="pass.yml"
           cat <<EOF >$FILE
