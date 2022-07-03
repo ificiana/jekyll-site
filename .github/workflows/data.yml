@@ -41,7 +41,7 @@ jobs:
           token: ${{ github.token }}
           
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@main
         with: 
           path: ./_site
           retention-days: 1
