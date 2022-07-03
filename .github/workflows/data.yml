@@ -10,7 +10,7 @@ jobs:
 
       - name: Create _data directory
         run: |
-          mkdir _data
+          mkdir -p _data
       
       - name: Create file pass
         run: |
