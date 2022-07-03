@@ -26,6 +26,8 @@ jobs:
             - first fun
             - then run
           EOF
+          cd ..
+          ls -a
           cd jekyll-site
           ls -a
       
