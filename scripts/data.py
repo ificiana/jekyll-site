@@ -14,7 +14,7 @@ args = parser.parse_args()
 client = pymongo.MongoClient(f"{args.mongo_url}")
 db = client[args.database]
 for col in db.list_collection_names():
-    _dir = Path("../_data/")
+    _dir = Path("_data/")
     if col != "top":
         _dir = _dir.joinpath(col)
         Path.mkdir(_dir, exist_ok=True)
