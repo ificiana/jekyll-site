@@ -12,19 +12,9 @@ jobs:
         run: |
           mkdir -p _data
       
-      - name: Create file pass
+      - name: Create data file
         run: |
-          cd _data
-          touch pass.yml
-          FILE="pass.yml"
-          cat <<EOF >$FILE
-          text: >-
-            This is fantastic
-          num: 56
-          list:
-            - first fun
-            - then run
-          EOF
+          python scripts/data.py ${{ secrets.MONGO_URL }}
       
       - name: Build pages with jekyll
         uses: actions/jekyll-build-pages@v1
