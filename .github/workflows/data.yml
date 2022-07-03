@@ -26,11 +26,7 @@ jobs:
             - first fun
             - then run
           EOF
-          cd ..
-          ls -a
-          cd ..
-          ls -a
-          cd ..
+          cd jekyll-site
           ls -a
       
       - uses: actions/upload-artifact@v3
