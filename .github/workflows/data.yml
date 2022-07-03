@@ -34,4 +34,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: data
-          path: _data/
+          path: jekyll-site/_data/
