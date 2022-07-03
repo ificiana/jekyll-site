@@ -4,3 +4,13 @@
 
 layout: default
 ---
+
+{% if site.data.pass %}
+    {{ site.data.pass.text }}
+    {{ site.data.pass.num }}
+    {% for i in site.data.pass.list %}
+        {{ i }}
+    {% endfor %}
+{% else %}
+    WE FAILED
+{% endif %}
