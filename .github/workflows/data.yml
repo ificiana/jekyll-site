@@ -25,6 +25,7 @@ jobs:
             - first fun
             - then run
           EOF
+          cd ..
       
       - uses: actions/upload-artifact@v3
         with:
