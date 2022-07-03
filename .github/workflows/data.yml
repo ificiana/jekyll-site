@@ -17,6 +17,7 @@ jobs:
       - name: Create file pass
         run: |
           ls -a
+          cd _data
           touch pass.yml
           FILE="pass.yml"
           cat <<EOF >$FILE
@@ -28,8 +29,6 @@ jobs:
             - then run
           EOF
           cd ..
-          ls -a
-          cd jekyll-site
           ls -a
       
       - uses: actions/jekyll-build-pages@v1
