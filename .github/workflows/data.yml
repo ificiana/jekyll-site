@@ -25,3 +25,8 @@ jobs:
             - first fun
             - then run
           EOF
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: data
+          path: _data
