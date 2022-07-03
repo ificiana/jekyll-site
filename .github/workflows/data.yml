@@ -31,7 +31,16 @@ jobs:
           cd jekyll-site
           ls -a
       
-      - uses: actions/upload-artifact@v3
+      - uses: actions/jekyll-build-pages@v1
         with:
-          name: data
-          path: jekyll-site/_data/
+          source: .
+          destination: ./_site
+          future: false
+          verbose: true
+          token: ${{ github.token }}
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          clean: true
