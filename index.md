@@ -12,5 +12,5 @@ layout: default
         {{ i }}
     {% endfor %}
 {% else %}
-    WE FAILED
+    WE FAILED, PLS FIX
 {% endif %}
