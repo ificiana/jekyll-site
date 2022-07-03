@@ -31,3 +31,5 @@ jobs:
         with:
           name: data
           path: _data/
+        run: ls
+        
