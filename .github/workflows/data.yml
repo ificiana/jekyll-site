@@ -26,10 +26,9 @@ jobs:
             - then run
           EOF
           cd ..
+          ls
       
       - uses: actions/upload-artifact@v3
         with:
           name: data
           path: _data/
-        run: ls
-        
