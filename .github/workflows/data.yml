@@ -11,8 +11,12 @@ jobs:
       - name: Create _data directory
         run: |
           mkdir -p _data
-      
-      - name: Create data file
+
+      - name: Install pymongo
+        run: |
+          pip install pymongo[srv]
+
+      - name: Create data files
         run: |
           python scripts/data.py ${{ secrets.MONGO_URL }}
       
