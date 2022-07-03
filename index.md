@@ -5,10 +5,11 @@
 layout: default
 ---
 
-{% if site.data.pass %}
-    {{ site.data.pass.text }}
-    {{ site.data.pass.num }}
-    {% for i in site.data.pass.list %}
+{% if site.data.test %}
+{% assign test=site.data.test %}
+    {{ test.pass..text }}
+    {{ test.pass.num }}
+    {% for i in test.pass.list %}
         {{ i }}
     {% endfor %}
 {% else %}
